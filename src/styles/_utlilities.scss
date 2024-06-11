@@ -1,6 +1,22 @@
 .container {
   padding: 3rem 4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @include for-tablet() {
+    max-width: 90rem;
+    padding: 3 4.5rem;
+  }
+  @include for-desktop() {
+    max-width: 114rem;
+    padding: 3 5rem;
+  }
+  @include for-desktop-lg() {
+    max-width: 140rem;
+    padding: 3 5.5rem;
+  }
 }
+
 .hidden {
   display: none;
 }
