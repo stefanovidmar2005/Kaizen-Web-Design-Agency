@@ -49,6 +49,11 @@
   text-align: center;
   flex-direction: column;
 }
+.section__title {
+  font-family: "Raleway", sans-serif;
+  font-size: $section-title;
+  font-weight: 800;
+}
 
 .section__sub-content {
   display: flex;

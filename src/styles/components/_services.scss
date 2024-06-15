@@ -1,2 +1,32 @@
-.services {
+.cards {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.card {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 6rem 4.5rem;
+  border-radius: 11px;
+  background: linear-gradient(
+    135.8deg,
+    rgba(0, 0, 0, 0.85) 69.93%,
+    rgba(238, 238, 238, 0.85) 150.82%
+  );
+  color: #fff;
+  text-align: left;
+  &__title {
+    font-weight: bold;
+  }
+  &__description {
+    font-weight: 400;
+  }
+  &__cta {
+    color: $primary-color-900;
+    font-size: 1.6rem;
+  }
 }
