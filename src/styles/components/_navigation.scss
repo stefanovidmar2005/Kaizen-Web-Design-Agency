@@ -1,0 +1,59 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &__menu {
+    background: none;
+    border: 0;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    background: linear-gradient(
+      137.79deg,
+      rgba(0, 0, 0, 1) 67.82%,
+      rgba(238, 238, 238, 0.85) 144.31%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(100%);
+    left: 0;
+    right: 0;
+    top: 7rem;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border-bottom: 1px solid white;
+    gap: 1.5rem;
+    &-item a {
+      width: 100%;
+      display: block;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "satoshi";
+    }
+  }
+  @include for-tablet() {
+    &__list {
+      display: flex;
+      justify-content: right;
+      gap: 10px;
+      &-item {
+        padding: 0;
+        a {
+          color: #333;
+        }
+      }
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+}

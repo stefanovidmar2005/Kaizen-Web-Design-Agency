@@ -1,0 +1,19 @@
+---
+import Subheadline from "./Subheadline.astro";
+
+const{sectionTitle, subHeadline, sectionId} = Astro.props;
+---
+<!-- Parameters:
+        1. Section Title
+        2. Section ID
+        3. Section subHeading
+-->
+<section id={sectionId} class=`section ${sectionId}`>
+ 
+  <div class="section__sub-content">
+<Subheadline sectionSub={subHeadline}/>
+<h2>{sectionTitle}</h2>
+  </div>
+  <slot/>
+
+</section>

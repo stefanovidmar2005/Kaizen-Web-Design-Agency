@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5.7rem;
+  text-align: center;
+  margin-top: 7rem;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    &-main {
+      font-weight: bold;
+      font-size: $hero-title;
+      line-height: 1.2;
+      font-family: "Raleway", sans-serif;
+    }
+    &-accent {
+      color: $primary-color-800;
+    }
+  }
+
+  &__description {
+    font-size: $hero-description;
+  }
+}

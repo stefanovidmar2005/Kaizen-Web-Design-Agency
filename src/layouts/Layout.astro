@@ -1,7 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import Container from '../components/Container.astro';
-import Hero from '../components/Hero.astro';
+
 ---
 
 <!doctype html>
@@ -14,13 +14,13 @@ import Hero from '../components/Hero.astro';
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
 		<title>Kaizen Web Design Agency</title>
 	</head>
 	<body>
 		<Container>
 			<Navigation/>
-			<Hero/>
+			<slot/>
 	</Container>
-		<slot />
 	</body>
 </html>

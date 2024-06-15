@@ -40,6 +40,7 @@ body {
   overflow-x: hidden;
   font-size: 1.6rem;
   font-family: "Satoshi", sans-serif;
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -47,9 +48,21 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -76,4 +89,8 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.section__subheadline {
+  display: inline-block;
+  border-top: 2px solid $primary-color-900;
 }

@@ -1,2 +1,14 @@
-$primary-color: #f48484;
-$font-size-hero: clamp(3rem, 1.943661971830986rem + 2.8169014084507045vw, 6rem);
+$primary-color-900: #ff6584;
+$primary-color-800: #f48484;
+$hero-title: clamp(3rem, 1.943661971830986rem + 2.8169014084507045vw, 6rem);
+$hero-description: clamp(
+  1.6rem,
+  1.4591549295774648rem + 0.3755868544600938vw,
+  2rem
+);
+
+$section-title: clamp(
+  2.8rem,
+  2.2014084507042253rem + 1.5962441314553992vw,
+  4.5rem
+);
