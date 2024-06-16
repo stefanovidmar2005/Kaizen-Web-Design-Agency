@@ -16,3 +16,9 @@ $section-title: clamp(
 );
 $card-title: clamp(1.6rem, 1.4591549295774648rem + 0.3755868544600938vw, 2rem);
 $card-cta: clamp(1.6rem, 1.5295774647887326rem + 0.1877934272300469vw, 1.8rem);
+$process-title: clamp(2rem, 1.788732394366197rem + 0.563380281690141vw, 2.6rem);
+$conversion-title: clamp(
+  2.5rem,
+  1.795774647887324rem + 1.8779342723004695vw,
+  4.5rem
+);

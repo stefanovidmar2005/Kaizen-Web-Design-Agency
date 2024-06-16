@@ -12,7 +12,7 @@ const processes = [{
   description: "Through consultations, wireframes, and high-fidelity designs, we ensure a responsive and accessible experience. We refine based on your feedback and provide assets for seamless development. Our collaborative approach ensures beautiful, effective websites that meet your business goals."
 }, {
   title:"Development", 
-  description: "we turn designs into high-performance websites. We build responsive, SEO-friendly sites with the latest technologies and conduct rigorous testing for functionality and compatibility. Through close collaboration, we ensure the final product meets your business goals, delivering a seamless, engaging online experience."
+  description: "We turn designs into high-performance websites. We build responsive, SEO-friendly sites with the latest technologies and conduct rigorous testing for functionality and compatibility. Through close collaboration, we ensure the final product meets your business goals, delivering a seamless, engaging online experience."
 }]
 ---
 
@@ -20,10 +20,13 @@ const processes = [{
     <div class="process__content">
       {processes.map((process, idx) => {
         return (
-          <div class="process__content-step">
-            <h4 class="process__content-step-title">0{idx + 1}- {process.title}</h4>
-            <p class="process__content-step-description">{process.description}</p>
-          </div>
+          <ul class="process__content-step">
+            <li>
+
+              <h4 class="process__content-step-title">0{idx + 1}- {process.title}</h4>
+              <p class="process__content-step-description">{process.description}</p>
+            </li>
+          </ul>
         )
       })}
     </div>

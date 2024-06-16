@@ -1,0 +1,19 @@
+.conversion {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 7rem;
+  padding: 6rem;
+  margin-top: 10rem;
+  background: linear-gradient(
+    135.8deg,
+    rgba(0, 0, 0, 0.85) 69.93%,
+    rgba(238, 238, 238, 0.85) 150.82%
+  );
+
+  border-radius: 10px;
+  text-align: center;
+  &__title {
+    font-size: $conversion-title;
+  }
+}

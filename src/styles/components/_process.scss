@@ -1,0 +1,23 @@
+.process {
+  margin-top: 8rem;
+  &__content {
+    margin-top: 5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &-step {
+      list-style-type: disc;
+    }
+    &-step li {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &-step-title {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: $process-title;
+    }
+  }
+}
