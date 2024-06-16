@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+
+const processes = [{
+  title: "Discovery Call",
+  description:"Schedule a Discovery Call with us to understand your business, project idea, and clarify your vision. We'll examine your current systems and create actionable next steps while answering any questions you might have about our service."
+},{
+  title:"Planning",
+  description: "Once subscribed add your project details to your Trello board. This includes uploading designs, outlining functionality, and providing all information that will guide the development process. Don't worry we'll guide you in setting up your project board correctly."
+}, {
+  title: "Design",
+  description: "Through consultations, wireframes, and high-fidelity designs, we ensure a responsive and accessible experience. We refine based on your feedback and provide assets for seamless development. Our collaborative approach ensures beautiful, effective websites that meet your business goals."
+}, {
+  title:"Development", 
+  description: "we turn designs into high-performance websites. We build responsive, SEO-friendly sites with the latest technologies and conduct rigorous testing for functionality and compatibility. Through close collaboration, we ensure the final product meets your business goals, delivering a seamless, engaging online experience."
+}]
+---
+
+<Section sectionTitle="Our Working Process" sectionID="process" subHeadline="How We Work">
+    <div class="process__content">
+      {processes.map((process, idx) => {
+        return (
+          <div class="process__content-step">
+            <h4 class="process__content-step-title">0{idx + 1}- {process.title}</h4>
+            <p class="process__content-step-description">{process.description}</p>
+          </div>
+        )
+      })}
+    </div>
+    <div class="process__illustration"></div>
+</Section>

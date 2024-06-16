@@ -1,5 +1,7 @@
+// brand Colors
 $primary-color-900: #ff6584;
 $primary-color-800: #f48484;
+// Typography
 $hero-title: clamp(3rem, 1.943661971830986rem + 2.8169014084507045vw, 6rem);
 $hero-description: clamp(
   1.6rem,
@@ -12,3 +14,5 @@ $section-title: clamp(
   2.2014084507042253rem + 1.5962441314553992vw,
   4.5rem
 );
+$card-title: clamp(1.6rem, 1.4591549295774648rem + 0.3755868544600938vw, 2rem);
+$card-cta: clamp(1.6rem, 1.5295774647887326rem + 0.1877934272300469vw, 1.8rem);
