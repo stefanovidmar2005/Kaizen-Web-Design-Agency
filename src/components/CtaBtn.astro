@@ -1,5 +1,5 @@
 ---
-const {title, style} = Astro.props;
+const {title, style, } = Astro.props;
 ---
 <a href="#" class=`btn-cta ${style === undefined ? "" : "btn-"}${style ?? ""}` aria-label={title}>
   {title}
