@@ -1,0 +1,91 @@
+---
+import Section from "./Section.astro";
+
+const questions = [{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id: 1
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:2
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:3
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:4
+},
+]
+
+
+---
+
+<Section sectionTitle="Frequently Asked Questions" sectionID="faq" subHeadline="Find Answers Quickly">
+
+
+  <div class="faq__list">
+    {questions.map((q,idx) => {      
+      return(
+      <div class="faq__list-item">
+        <dt class="faq__list-item-question" data-question-id={idx + 1}>Q: {q.question}</dt>
+        <dd class="faq__list-item-answer" data-question-id={idx + 1}>{q.answer}</dd>
+      </div>
+      )
+    })}
+  </div>
+</Section>
+
+
+<script>
+
+const questions = [{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id: 1
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:2
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:3
+},
+{
+
+question:"How long to build a custom website",
+answer:"The timeline for building a custom website depends on the complexity and specific requirements of your project. Typically, a custom website can take anywhere from 4 to 12 weeks from the initial consultation to the final launch.",
+id:4
+},
+]
+
+    const faqList = document.querySelector(".faq__list");
+  faqList.addEventListener("click", (evnt) => {
+    const targetEl = evnt.target;
+    if (!(targetEl instanceof Element) || !targetEl.classList.contains("faq__list-item-question")) return;
+
+    const findQuestionId= (el) => +el.getAttribute('data-question-id');
+    const answer = questions.filter((question) => question.id === findQuestionId(targetEl))
+  
+    const answerEl = document.querySelector(`.faq__list-item-answer[data-question-id="${answer[0].id}"]`);
+    answerEl.classList.toggle('show-question');
+
+})
+
+ 
+</script>
