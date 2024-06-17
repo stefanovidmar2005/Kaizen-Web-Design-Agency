@@ -16,13 +16,15 @@
         position: relative;
         border-bottom: 3px solid #ddd;
         padding-bottom: 1rem;
+        font-size: $faq-question;
         &::after {
           content: "\25BC";
           position: absolute;
           right: 0;
-          color: $primary-color-900;
+          // color: $primary-color-900;
         }
       }
+
       &-answer {
         opacity: 0;
         visibility: hidden;

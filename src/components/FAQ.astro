@@ -77,6 +77,7 @@ id:4
     const faqList = document.querySelector(".faq__list");
   faqList.addEventListener("click", (evnt) => {
     const targetEl = evnt.target;
+    // Guard Clause
     if (!(targetEl instanceof Element) || !targetEl.classList.contains("faq__list-item-question")) return;
 
     const findQuestionId= (el) => +el.getAttribute('data-question-id');
