@@ -1,5 +1,7 @@
 ---
 import Container from '../components/Container.astro';
+
+const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 ---
 
 <!doctype html>
@@ -15,7 +17,7 @@ import Container from '../components/Container.astro';
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
 		<title>Kaizen Web Design Agency</title>
 	</head>
-	<body>
+	<body style=`background: var(${backgroundColor}); color:${textColor}`>
 	<Container>
 			<slot/>
 	</Container>
