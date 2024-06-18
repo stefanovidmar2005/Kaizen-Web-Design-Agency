@@ -30,7 +30,9 @@ const navlinks = [
     </a>
     <div class="navigation__wrapper">
       <button class="navigation__menu" aria-expanded="false" aria-label="Open Mobile Navigation">
-        <Icon name="menu" size={32} />
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+      </label>
        </button>
        <ul class="navigation__list hidden">
         {
@@ -49,9 +51,22 @@ const navlinks = [
 <script>
 const navBtn = document.querySelector(".navigation__menu");
 const navDrawer = document.querySelector(".navigation__list");
-navBtn.addEventListener('click', () => {
+const navLinks = document.querySelectorAll(".navigation__list-item");
+const menuIcon = document.querySelector(".menu-icon")
+const toggleDrawer = () => {
   navBtn.setAttribute('aria-expanded', navBtn.getAttribute('aria-expanded') === "false" ? 'true' : 'false')
   navDrawer.classList.toggle("hidden");
   navDrawer.classList.toggle("show");
+  navBtn.classList.toggle('menu-open');
+  document.body.classList.toggle("overflow-hidden")
+  menuIcon.classList.toggle('rotate');
+}
+
+const mobileNav = () => {
+navBtn.addEventListener("click", toggleDrawer);
+navLinks.forEach((link) => {
+  link.addEventListener("click", toggleDrawer);
 })
+}
+mobileNav();
 </script>

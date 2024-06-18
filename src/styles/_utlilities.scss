@@ -29,8 +29,12 @@ h4 {
   visibility: hidden;
 }
 .show {
-  transition: all 0.5s ease-in;
-  transform: translateY(0%) !important;
+  opacity: 1 !important;
+  visibility: visible;
+  transform: translateY(0);
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .btn-cta {
