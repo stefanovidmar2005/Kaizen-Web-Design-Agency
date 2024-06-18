@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(
+    131.25deg,
+    rgba(0, 0, 0, 0.85) 65.02%,
+    rgba(238, 238, 238, 0.85) 104.03%
+  );
+  color: #fff;
+}
+
+.site__review {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    &-label {
+      border: 2px solid #04ff78;
+      padding: 0.5rem 1.8rem;
+      border-radius: 3rem;
+      font-size: 1.4rem;
+    }
+    &-title {
+      font-size: $review-title;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    &-description {
+      &-accent {
+        color: $primary-color-900;
+      }
+    }
+    &-benifits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  &-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
