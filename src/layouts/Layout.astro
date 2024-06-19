@@ -1,6 +1,6 @@
 ---
 import Container from '../components/Container.astro';
-
+const {title} = Astro.props;
 const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 ---
 
@@ -10,6 +10,7 @@ const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<meta title={title} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +19,11 @@ const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 		<title>Kaizen Web Design Agency</title>
 	</head>
 	<body style=`background: var(${backgroundColor}); color:${textColor}`>
-	<Container>
-			<slot/>
-	</Container>
+		<main>
+			<Container>
+				<slot/>
+		</Container>
+		</main>
+
 	</body>
 </html>

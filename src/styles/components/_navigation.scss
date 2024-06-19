@@ -4,8 +4,30 @@
   justify-content: space-between;
   position: relative;
   &__menu {
-    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
     border: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  &__menu.menu-open .hamburger-menu-dash:nth-child(1) {
+    background: white;
+    transform: rotateZ(45deg);
+    top: 8px;
+  }
+  &__menu.menu-open .hamburger-menu-dash:nth-child(2) {
+    background: white;
+    width: 0;
+    transform: translateX(-50px);
+  }
+  &__menu.menu-open .hamburger-menu-dash:nth-child(3) {
+    background: white;
+    transform: rotateZ(-45deg);
+    top: -8px;
   }
   &__wrapper {
     display: flex;
@@ -13,24 +35,23 @@
   }
   &__list {
     background: linear-gradient(
-      137.79deg,
+      133.67deg,
       rgba(0, 0, 0, 1) 67.82%,
-      rgba(238, 238, 238, 0.85) 144.31%
+      rgba(255, 255, 255, 1) 100%
     );
     position: fixed;
-    top: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     bottom: 0;
     left: 0;
-    z-index: 100;
-    padding: 10rem 2rem;
-    text-align: center;
+    z-index: 30;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin: 0;
     opacity: 0;
-    margin-top: 8rem;
     transition: all 0.3s ease-in-out;
     &-item a {
       width: 100%;
@@ -59,47 +80,11 @@
   }
 }
 
-.menu-container {
+.hamburger-menu-dash {
   position: relative;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  width: 3rem;
-  height: 2rem;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+  display: block;
+  height: 0.4rem;
+  background-color: #000;
+  width: 3.2rem;
   transition: all 0.3s ease-in-out;
-}
-
-.menu-icon::before,
-.menu-icon::after,
-.menu-icon span {
-  content: "";
-  background-color: #333;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  transition: all 1s linear;
-}
-
-.menu-icon::before {
-  top: 0;
-}
-
-.menu-icon::after {
-  bottom: 0;
-}
-
-.menu-icon span {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.rotate {
-  transform: rotate(360deg);
 }
