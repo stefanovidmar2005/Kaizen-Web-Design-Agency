@@ -10,6 +10,9 @@
     gap: 3rem;
     align-items: center;
   }
+  @include for-desktop() {
+    gap: 6rem;
+  }
   &__title {
     display: flex;
     flex-direction: column;
@@ -52,6 +55,9 @@
   &__illustration {
     @include for-tablet() {
       flex: 0.75;
+    }
+    @include for-desktop() {
+      flex: 1;
     }
   }
 }
