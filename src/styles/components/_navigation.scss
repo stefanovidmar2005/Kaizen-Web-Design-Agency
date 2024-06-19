@@ -54,6 +54,14 @@
     opacity: 0;
     transition: all 0.3s ease-in-out;
     transform: translateX(100%);
+    @include for-tablet() {
+      transform: translate(0);
+      background: none;
+      opacity: 1;
+      position: static;
+      flex-direction: row;
+      gap: 2rem;
+    }
     &-item a {
       width: 100%;
       display: block;
@@ -63,9 +71,13 @@
       padding: 0.5rem 2rem;
       border: 2px solid transparent;
       transition: border 0.3s ease-in-out;
+      @include for-tablet() {
+        text-transform: capitalize;
+        padding: 0;
+        color: #333;
+      }
       &:hover {
         border-bottom: 2px solid $primary-color-900;
-        border-left: 2px solid $primary-color-900;
       }
     }
   }
@@ -82,20 +94,8 @@
     transition: all 0.5s ease-in-out;
   }
 
-  @include for-tablet() {
-    &__list {
-      display: flex;
-      justify-content: right;
-      gap: 10px;
-      &-item {
-        padding: 0;
-        a {
-          color: #333;
-        }
-      }
-    }
-
-    &__menu {
+  &__menu {
+    @include for-tablet() {
       display: none;
     }
   }

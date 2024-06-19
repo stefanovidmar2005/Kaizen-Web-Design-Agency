@@ -49,13 +49,14 @@ label {
   text-decoration: none;
   font-weight: bold;
   transition: 250ms transform linear;
+  @include for-tablet() {
+    font-size: 1.4rem;
+    padding: 1.25rem 2rem;
+  }
 }
 
 .btn-cta:hover {
   transform: translateY(-3px);
-}
-.secondary__cta {
-  border-bottom: 1px solid $primary-color-900;
 }
 
 .btn-dark {

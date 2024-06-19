@@ -39,12 +39,12 @@ const navlinks = [
           <span class="hamburger-menu-dash"></span>
           <span class="hamburger-menu-dash"></span>
        </button>
-       <ul class="navigation__list hidden">
+       <ul class="navigation__list">
         {
           navlinks.map((link) => {
             return(
             <li class="navigation__list-item">
-          <a href={link.url}>{link.index} {link.title}</a>
+          <a href={link.url}>{link.title}</a>
             </li>
           )})
         }

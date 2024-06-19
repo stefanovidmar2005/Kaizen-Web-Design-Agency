@@ -4,18 +4,30 @@
   gap: 5.7rem;
   text-align: center;
   margin-top: 7rem;
-
+  @include for-tablet() {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+    align-items: center;
+  }
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    @include for-tablet() {
+      flex: 1;
+      align-items: flex-start;
+    }
     &-main {
       font-weight: bold;
-      font-size: $hero-title;
       line-height: 1.2;
       font-family: "Raleway", sans-serif;
+      font-size: 3rem;
+      @include for-tablet() {
+        font-size: 4rem;
+      }
     }
     &-accent {
       color: $primary-color-800;
@@ -27,9 +39,19 @@
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
+    @include for-tablet() {
+      justify-content: flex-start;
+      flex-direction: row;
+    }
   }
 
   &__description {
-    font-size: $hero-description;
+    font-size: 1.5rem;
+  }
+  &__illustration {
+    @include for-tablet() {
+      flex: 0.75;
+    }
   }
 }
