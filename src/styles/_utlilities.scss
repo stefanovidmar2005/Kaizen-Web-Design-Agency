@@ -34,7 +34,7 @@ label {
 .show {
   opacity: 1 !important;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0) !important;
 }
 .overflow-hidden {
   overflow: hidden;
