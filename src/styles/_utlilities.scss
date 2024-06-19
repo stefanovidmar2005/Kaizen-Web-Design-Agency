@@ -54,6 +54,9 @@ label {
 .btn-cta:hover {
   transform: translateY(-3px);
 }
+.secondary__cta {
+  border-bottom: 1px solid $primary-color-900;
+}
 
 .btn-dark {
   color: #fff;
