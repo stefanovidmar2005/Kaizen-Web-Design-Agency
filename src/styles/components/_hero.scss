@@ -13,6 +13,9 @@
   @include for-desktop() {
     gap: 6rem;
   }
+  @include for-desktop-lg() {
+    margin-top: 10rem;
+  }
   &__title {
     display: flex;
     flex-direction: column;
@@ -23,6 +26,7 @@
       flex: 1;
       align-items: flex-start;
     }
+
     &-main {
       font-weight: bold;
       line-height: 1.2;
@@ -30,6 +34,9 @@
       font-size: 3rem;
       @include for-tablet() {
         font-size: 4rem;
+      }
+      @include for-desktop-lg() {
+        font-size: 6rem;
       }
     }
     &-accent {
@@ -51,6 +58,9 @@
 
   &__description {
     font-size: 1.5rem;
+    @include for-desktop-lg() {
+      font-size: 2rem;
+    }
   }
   &__illustration {
     @include for-tablet() {

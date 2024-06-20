@@ -9,7 +9,7 @@
   }
 }
 @mixin for-desktop-lg {
-  @media (min-width: 90em) {
+  @media (min-width: 81.25em) {
     @content;
   }
 }

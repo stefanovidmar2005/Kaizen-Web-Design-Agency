@@ -4,6 +4,10 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 4.5rem;
+    @include for-desktop() {
+      max-width: 80rem;
+      margin-top: 8rem;
+    }
     &-item {
       display: flex;
       flex-direction: column;

@@ -12,10 +12,21 @@
   border-radius: 10px;
   text-align: center;
 
+  @include for-desktop() {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__title {
     font-size: 2rem;
     line-height: 1.7;
     margin-bottom: 5rem;
+    @include for-desktop() {
+      flex: 1;
+      text-align: left;
+    }
     @include for-tablet() {
       font-size: 3.5rem;
     }
