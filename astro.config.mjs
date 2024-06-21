@@ -1,7 +1,9 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
+import { register } from "swiper/element/bundle";
 
-// https://astro.build/config
+register();
+
 export default defineConfig({
   integrations: [icon()],
 });

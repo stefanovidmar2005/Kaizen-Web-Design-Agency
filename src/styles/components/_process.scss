@@ -1,4 +1,12 @@
 .process {
+  &__container {
+    @include for-desktop() {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   &__content {
     margin-top: 5rem;
     text-align: left;
@@ -12,6 +20,11 @@
       grid-row-gap: 4rem;
       margin-bottom: 4rem;
     }
+    @include for-desktop() {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
     &-step {
       list-style-type: disc;
     }
@@ -24,6 +37,15 @@
       font-family: "Raleway", sans-serif;
       font-weight: 800;
       font-size: $process-title;
+    }
+  }
+  &__illustration {
+    opacity: 0;
+    visibility: hidden;
+    @include for-desktop() {
+      flex: 1;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
