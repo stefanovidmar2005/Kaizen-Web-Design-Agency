@@ -40,12 +40,10 @@
     }
   }
   &__illustration {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     @include for-desktop() {
       flex: 1;
-      opacity: 1;
-      visibility: visible;
+      display: initial;
     }
   }
 }
