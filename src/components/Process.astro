@@ -2,8 +2,6 @@
 import Section from "./Section.astro";
 import { getCollection } from 'astro:content';
 import { Image } from "astro:assets";
-
-
 const processes = await getCollection('process');
 
 
@@ -28,9 +26,9 @@ const processes = await getCollection('process');
     </div>
 
     <div class="process__illustration"> 
-      <swiper-container speed="500" loop="true">
+      <swiper-container autoplay class="swiper">
     {processes.map((process) => {
-      return (      <swiper-slide class="process__illustration"
+      return (      <swiper-slide >
                       <Image src={process.data.img} alt={process.data.title}/>
                   </swiper-slide>)
     })}
