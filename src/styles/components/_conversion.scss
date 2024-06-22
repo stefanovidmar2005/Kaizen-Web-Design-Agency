@@ -16,7 +16,7 @@
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__title {
@@ -29,6 +29,9 @@
     }
     @include for-tablet() {
       font-size: 3.5rem;
+    }
+    @include for-desktop-lg() {
+      flex: 0.7;
     }
   }
 }
