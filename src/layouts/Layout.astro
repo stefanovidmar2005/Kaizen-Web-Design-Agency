@@ -12,6 +12,7 @@ const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta title={title} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -27,3 +28,5 @@ const {backgroundColor = "--background-color-page1", textColor} = Astro.props;
 
 	</body>
 </html>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/stefanovidmarmarketingagency/free-website-consultation', text: 'Free Consultation', color: '#ff6584', textColor: '#000000', branding: undefined }); }</script>
