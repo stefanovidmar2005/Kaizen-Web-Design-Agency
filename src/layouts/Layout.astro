@@ -16,14 +16,14 @@ const {backgroundColor = "--background-color-page1", textColor, title} = Astro.p
 		<!-- FAVICON -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<!-- CALENDLY -->
-		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" rel="preload">
 		<!-- GOOGLE FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
 <!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body style=`background: var(${backgroundColor}); color:${textColor}`>
