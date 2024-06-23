@@ -6,6 +6,9 @@
   flex-direction: column;
   padding: 3.5rem 3.7rem;
   margin-top: 6rem;
+  @include for-desktop() {
+    flex: 0.7;
+  }
   &__title {
     letter-spacing: 0.08rem;
     margin-bottom: 2.4rem;
