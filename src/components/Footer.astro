@@ -5,47 +5,85 @@ import { Icon } from "astro-icon/components";
 const socials = [
 
  {
-  name: "insta",
-  size: 32,
-  link: '#'
+  name: "facebook",
+  size: 24,
+  link: 'https://www.facebook.com/profile.php?id=61560894868630'
 }, 
 {
-  name: "discord",
-  size: 32,
-  link: "#"
+  name: "insta",
+  size: 24,
+  link: "https://www.instagram.com/kaizenwebagency?igsh=YTQwZjQ0NmI0OA=="
 }, 
 {
   name: "youtube",
-  size: 32,
+  size: 24,
   link:"https://youtube.com/@kaizensoftwaresolutions-fp1ly?si=4U24YM4XVoFMsuBP",
 }]
 ---
 
 <footer class="footer" id="contact">
-<div class="footer__content">
-  
-  <h4 class="footer__content-title">Contact Us</h4>
-  <p class="footer__content-mail">thekaizenagencyofficial@gmail.com</p>
-  <h4 class="footer__content-follow"> Follow Us</h4>
-    <div class="footer__content-follow-socials"> 
-
-      {socials.map((social) => {
-
-        return (
-        <a href={social?.link} target="_blank">
-          <Icon name={social.name} size={social.size}/>
-        </a>
-
-        )
-      })}
-<!-- <Icon name="insta" size={32}/>
-<Icon name="discord" size={32}/>
-<Icon name="youtube" size={32}/>  -->
+  <div class="footer__content-container">
+    <div class="footer__services">
+      <h5 class="footer__heading">
+    Services
+      
+      </h5>
+      <ul>
+        <li>
+          <a href="#services">Web Design</a>
+    
+        </li> 
+        <li>
+          <a href="#services">Web Development</a>
+    
+        </li>
+        <li>
+          <a href="#services">Search Engine Optimization</a>
+    
+        </li>
+      </ul>
     </div>
+    <div class="footer__company">
+      <h5 class="footer__heading">
+        Company
+          
+          </h5>
+          <ul>
+            <li>
+              <a href="#">Our why</a>
+        
+            </li> 
+            <li>
+              <a href="#">Case Study</a>
+        
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+        
+            </li>
+          </ul>
+    </div>
+    <div class="footer__contacts">
+      <h5 class="footer__heading">Contact</h5>
+      <a href="">thekaizenagencyofficial@gmail.com</a>
+      <div class="footer__socials">
+        {socials.map((social) => {
+    
+          return (
+          <a href={social?.link} target="_blank">
+            <Icon name={social.name} size={social.size}/>
+          </a>
+      
+          )
+        })}
+      </div>
+     
+    </div>
+    </div>
+  </div>
 
-</div>
 <div class="footer__copy">
   <p>© 2024 Kaizen Media, LLC. All rights reserved.</p>
   <p>Made with ❤️ by Kaizen Media </p>
-</div>
+</div> 
 </footer>

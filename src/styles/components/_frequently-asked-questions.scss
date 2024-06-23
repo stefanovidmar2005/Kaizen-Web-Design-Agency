@@ -15,6 +15,7 @@
       width: 100%;
       padding: 8.5rem 10rem;
       gap: 20rem;
+      align-items: center;
     }
   }
   &__illustration {
@@ -30,7 +31,6 @@
     margin-top: 4.5rem;
     @include for-desktop() {
       max-width: 80rem;
-      margin-top: 8rem;
     }
     @include for-desktop-lg() {
       flex: 1;
