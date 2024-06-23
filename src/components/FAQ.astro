@@ -36,7 +36,7 @@ id:4
 <Section sectionTitle="Frequently Asked Questions" sectionID="faq" subHeadline="Find Answers Quickly">
 
 <div class="faq__desktop">
-  <div class="faq__list">
+  <dl class="faq__list">
     {questions.map((q,idx) => {      
       return(
       <div class="faq__list-item">
@@ -48,9 +48,7 @@ id:4
       </div>
       )
     })}
-
-  
-  </div>
+  </dl>
   <div class="faq__illustration">
     <svg width="249" height="500" viewBox="0 0 249 500" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M201.729 500H43.882C20.2069 500 0.945557 481.908 0.945557 459.671V67.7388C0.945557 45.5016 20.2069 27.4102 43.882 27.4102H201.729C225.404 27.4102 244.665 45.5016 244.665 67.7388C247.604 225.127 252.614 401.376 244.665 459.671C244.665 481.908 225.404 500 201.729 500Z" fill="white"/>
