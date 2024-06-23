@@ -6,18 +6,24 @@ const {backgroundColor = "--background-color-page1", textColor, title} = Astro.p
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- META TAGS -->
 		<meta charset="UTF-8" />
 		<meta name="description" content="Get high-impact bankable digital marketing results for your business via our award-winning SEO, Content Marketing, and PPC, and Website Development." />
 		<meta name="viewport" content="width=device-width" />
 		<meta title={title} />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="theme-color" content="#000000"/>
+		<!-- FAVICON -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- CALENDLY -->
 		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<!-- GOOGLE FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body style=`background: var(${backgroundColor}); color:${textColor}`>
@@ -29,6 +35,10 @@ const {backgroundColor = "--background-color-page1", textColor, title} = Astro.p
 
 	</body>
 </html>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/stefanovidmarmarketingagency/free-website-consultation', text: 'Free Consultation', color: '#333333', textColor: '#fff',}); }</script>
+<!-- CALENDLY -->
+<script is:inline src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script is:inline async type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/stefanovidmarmarketingagency/free-website-consultation', text: 'Free Consultation', color: '#333333', textColor: '#fff',}); }</script>
+<!-- SWIPER -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
